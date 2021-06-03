@@ -12,6 +12,7 @@ int main(){
     float gastos[cantgastos];
     float exceso[]= {11290,14390,17990,21600,43190,64770,86370,115140};//Array Estatico de la tabla de impuestos
     float Impuestos[]= {0,0.05,0.1,0.12,0.15,0.2,0.25,0.3,0.35};//Array de Impuestos a pagar segun la base imponible 
+    int f;
 
     printf("-----------------------------------------------------\n");
     printf("-           MINI CALCULADORA TRIBUTARIA             -\n");
@@ -46,11 +47,18 @@ int main(){
     //procedemos a la parte de la calculadora
     printf("Por favor ingrese el número de Facturas de Ventas/ingresos que su razón social haya recibido, ejemplo = 5: \n");
     scanf("%i",&cantventas);
-    printf("Por favor ingrese el valor del valo de la factura  :\n");
-
+    for(f=0; f<cantventas; f++) 
+    {
+        printf("Por favor ingrese el valor del valor de la factura %i :\n",i);
+        scanf("%.2f",&ventas[f]);
+    }
     printf("Por favor ingrese el número de Facturas de Gastos referentes a su razón Social: \n");
     scanf("%i",&cantgastos);
-    printf("Por favor ingresar el valor de la factura número  :\n");
+    for(f=0; f<cantgastos; f++) 
+    {
+        printf("Por favor ingresar el valor de la factura número  :\n");
+        scanf("%.2f",&gastos[f]);
+    }
 
     printf("El valor a pagar de sus impuestos es de: \n");
     system("pause");
