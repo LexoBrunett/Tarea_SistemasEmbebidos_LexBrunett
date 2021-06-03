@@ -1,0 +1,2 @@
+language = "c"
+run = "gcc TareaEmbebidos1_LexBrunett.c"

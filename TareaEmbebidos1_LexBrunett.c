@@ -37,9 +37,9 @@ int main(){
     printf("\n");
     printf("------------------------------------------\n");
     printf("\n");
-    // Se agrega el valor del nombre apellido 
-    printf("Por favor escriba su nombre, ejemplo = Julio Martinez: \n");
-    gets(usuario);
+    // Se agrega el valor del nombre y apellido 
+    printf("Por favor escriba su nombre, ejemplo = Julio: \n");
+    scanf("%s",usuario);
     printf("Bienvenido  %s ",usuario);
     printf("\n");
     //espacio para que no se vea todo tan apretado
@@ -55,7 +55,7 @@ int main(){
     {
         printf("Por favor ingrese el valor del valor de la factura %i :",f);
         printf("\n");
-        scanf("%.2f",&ventas[f]);
+        scanf("%f",&ventas[f]);
         sumaventas = sumaventas + ventas[f];
     }
     printf("Por favor ingrese el número de Facturas de Gastos referentes a su razón Social: \n");
@@ -64,7 +64,7 @@ int main(){
     {
         printf("Por favor ingresar el valor de la factura número %i :",f);
         printf("\n");
-        scanf("%.2f",&gastos[f]);
+        scanf("%2f",&gastos[f]);
         sumagastos = sumagastos +gastos[f];
     }
     //Una vez agregadas las facturas a sus vectores procederemos y sus sumas realizadas procedemos a obtener la Base imponible
@@ -79,10 +79,10 @@ int main(){
             //Esta formula ayuda a solucionar los impuestos a pagar
             impuesto = tasabasica[f] + ((baseimpo-exceso[f])*Impuestos[f]);
         }
-        else if(baseimpo >=exceso[-1])
+        else if(baseimpo >=exceso[9])
         {
             //Esta formula ayuda a solucionar los impuestos a pagar
-            impuesto = tasabasica[-1] + ((baseimpo-exceso[-1])*Impuestos[-1]);
+            impuesto = tasabasica[9] + ((baseimpo-exceso[9])*Impuestos[9]);
         }
 
     }
