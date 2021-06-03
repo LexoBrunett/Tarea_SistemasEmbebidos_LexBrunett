@@ -33,7 +33,7 @@ int main(){
     printf("\n");
     printf("------------------------------------------\n");
     printf("\n");
-    /* Se agrega el valor del nombre apellido */
+    // Se agrega el valor del nombre apellido 
     printf("Por favor escriba su nombre, ejemplo = Julio Martinez: \n");
     gets(usuario);
     printf("Bienvenido  %s ",usuario);
@@ -49,14 +49,16 @@ int main(){
     scanf("%i",&cantventas);
     for(f=0; f<cantventas; f++) 
     {
-        printf("Por favor ingrese el valor del valor de la factura %i :\n",i);
+        printf("Por favor ingrese el valor del valor de la factura %i :",f);
+        printf("\n");
         scanf("%.2f",&ventas[f]);
     }
     printf("Por favor ingrese el número de Facturas de Gastos referentes a su razón Social: \n");
     scanf("%i",&cantgastos);
     for(f=0; f<cantgastos; f++) 
     {
-        printf("Por favor ingresar el valor de la factura número  :\n");
+        printf("Por favor ingresar el valor de la factura número %i :",f);
+        printf("\n");
         scanf("%.2f",&gastos[f]);
     }
 
